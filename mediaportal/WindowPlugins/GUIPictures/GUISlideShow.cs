@@ -77,7 +77,7 @@ namespace MediaPortal.GUI.Pictures
 
         _loadVideoPlayback = true;
 
-        g_Player.Play(slideFilePath, g_Player.MediaType.Video);
+        g_Player.Play(slideFilePath, g_Player.MediaType.Video, null, true);
         g_Player.ShowFullScreenWindow();
 
         if (_isSlideShow)

@@ -423,7 +423,7 @@ namespace MediaPortal.GUI.Video
         case Action.ActionType.ACTION_PREV_CHAPTER:
         case Action.ActionType.ACTION_PREV_ITEM:
           {
-            if (GUIWindowManager.GetPreviousActiveWindow() == (int)GUIWindow.Window.WINDOW_SLIDESHOW)
+            if (g_Player.IsPicture())
             {
               {
                 GUISlideShow._slideDirection = -1;
@@ -441,7 +441,7 @@ namespace MediaPortal.GUI.Video
         case Action.ActionType.ACTION_NEXT_CHAPTER:
         case Action.ActionType.ACTION_NEXT_ITEM:
           {
-            if (GUIWindowManager.GetPreviousActiveWindow() == (int)GUIWindow.Window.WINDOW_SLIDESHOW)
+            if (g_Player.IsPicture())
             {
               {
                 GUISlideShow._slideDirection = 1;
@@ -864,7 +864,7 @@ namespace MediaPortal.GUI.Video
 
         case Action.ActionType.ACTION_STOP:
           {
-            if (GUIWindowManager.GetPreviousActiveWindow() == (int)GUIWindow.Window.WINDOW_SLIDESHOW)
+            if (g_Player.IsPicture())
             {
               GUISlideShow._slideDirection = 0;
             }
@@ -969,7 +969,7 @@ namespace MediaPortal.GUI.Video
             }
             if (chKey == 'b')
             {
-              if (GUIWindowManager.GetPreviousActiveWindow() == (int)GUIWindow.Window.WINDOW_SLIDESHOW)
+              if (g_Player.IsPicture())
               {
                 GUISlideShow._slideDirection = 0;
                 g_Player.Stop();

@@ -2741,7 +2741,7 @@ public class MediaPortalApp : D3DApp, IRender
             if (!g_Player.IsTV || !GUIGraphicsContext.IsFullScreenVideo)
             {
               Log.Info("Main: Stopping media");
-              if (GUIWindowManager.GetPreviousActiveWindow() == (int)GUIWindow.Window.WINDOW_SLIDESHOW)
+              if (g_Player.IsPicture())
               {
                 GUISlideShow._slideDirection = 0;
               }
